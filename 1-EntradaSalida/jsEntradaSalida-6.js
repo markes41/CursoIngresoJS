@@ -11,7 +11,7 @@ function sumar()
     //segundo = document.getElementById("numeroDos").value;
     resultado = parseInt(n1) + parseInt(n2);
 
-    alert("La suma es= " +resultado);
+    alert("La suma es = " +resultado);
 
 }
 
