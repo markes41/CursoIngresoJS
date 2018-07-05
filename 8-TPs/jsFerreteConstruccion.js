@@ -25,8 +25,9 @@ function Materiales ()
 {
 	var Largo = document.getElementById("Largo").value;
     var Ancho = document.getElementById("Ancho").value;
-    var BolsasCem = parseInt(Largo) * 2;
-    var BolsasCal = parseInt(Ancho) * 3;
+    var Base = Largo * Ancho;
+    var BolsasCem = Base * 2;
+    var BolsasCal = Base * 3; 
 
     alert("Se usarán "+BolsasCem+" de cemento y "+BolsasCal+" de cal.")
 
