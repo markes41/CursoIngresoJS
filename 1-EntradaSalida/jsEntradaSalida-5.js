@@ -12,3 +12,7 @@ function mostrar()
 
 }
 
+/*numeroUno = parseInt(numeroUno);
+  numeroDos = parseInt(numeroDos);
+  resultado = numeroUno + numeroDos;
+  alert("la suma es "+resultado);
