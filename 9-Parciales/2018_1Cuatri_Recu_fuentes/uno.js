@@ -1,16 +1,21 @@
 
 function mostrar()
 {
-var altura;
 var base;
+var altura;
 
-altura = prompt("Altura: ");
-base = prompt("Base: ");
+base = prompt("Altura: ");
+altura = prompt("Base: ");
 
-var perimetro = altura * 3;
-var superficie = altura * base / 2;
+base = parseInt();
+altura = parseInt();
+
+var perimetro = base * 3;
+var superficie = (altura*base) / 2;
 
 alert("El perimetro es: "+perimetro);
 alert("La superficie es: "+superficie);
 
 }
+
+//base = +base; parsear
