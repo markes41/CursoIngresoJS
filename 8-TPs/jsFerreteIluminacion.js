@@ -12,60 +12,68 @@ function CalcularPrecio ()
 {
     var cantidad = document.getElementById("Cantidad").value;
     var marca = document.getElementById("Marca").value;
+    var precioFinal;
 //PrecioLampara = 35;
 ///////////////////////////////////PARTE A///////////////////////////
      if(cantidad > 5){
          var precioA = cantidad * 35;
          var descuentoA = precioA * 50 / 100;
-         var precioFinalA = precioA - DescuentoA;
+         precioFinal = precioA - descuentoA;
 
-         document.getElementById("precioDescuento").value = precioFinalA;
+         document.getElementById("precioDescuento").value = precioFinal;
      }
      else{}
 ///////////////////////////////////PARTE B///////////////////////////
          if(cantidad == 5 && marca == "ArgentinaLuz"){
-             var precioB = 5 * 35;
+             var precioB = cantidad * 35;
              var descuentoB = precioB * 40 / 100;
-             var precioFinalB = precioB - descuentoB;
+             precioFinal = precioB - descuentoB;
 
-             document.getElementById("precioDescuento").value = precioFinalB;
+             document.getElementById("precioDescuento").value = precioFinal;
          }
          
          else{
-             var precioB2 = 5 * 35;
+             var precioB2 = cantidad * 35;
              var descuentoB2 = precioB2 * 30 / 100;
-             var precioFinalB2 = precioB2 - descuentoB2;
-             document.getElementById("precioDescuento").value = precioFinalB2;
+             precioFinal = precioB2 - descuentoB2;
+             document.getElementById("precioDescuento").value = precioFinal;
          }
 ///////////////////////////////////PARTE C///////////////////////////
-     if(cantidad == 4 && marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
-         var precioC = 4 * 35;
+     if(cantidad == 4 && (marca == "ArgentinaLuz" || marca == "FelipeLamparas")){
+         var precioC = cantidad * 35;
          var descuentoC = precioC * 25 / 100;
-         var precioCFinalC = precioC - descuentoC;
-         document.getElementById("precioDescuento").value = precioFinalC;
+         precioFinal = precioC - descuentoC;
+         document.getElementById("precioDescuento").value = precioFinal;
      }else{
          var descuentoC2 = precioC * 20 / 100;
-         document.getElementById("precioDescuento").value = descuentoC2;
+         document.getElementById("precioDescuento").value = descuentoC2;}
 ///////////////////////////////////PARTE D///////////////////////////
     if(cantidad == 3 && marca == "ArgentinaLuz"){
-        var precioD = 3 * 35;
+        var precioD = cantidad * 35;
         var descuentoD = precioD * 15 / 100;
-        var precioFinalD = precioD - descuentoD;
-        document.getElementById("precioDescuento").value = precioFinalD;
+        var precioFinal = precioD - descuentoD;
+        document.getElementById("precioDescuento").value = precioFinal;
     }else{
         if(cantidad == 3 && marca == "FelipeLamparas"){
-            var precioD2 = 3 * 35;
+            var precioD2 = cantidad * 35;
             var descuentoD2 = precioD2 * 10 / 100;
-            var precioFinalD2 = precioD2 - descuentoD2;
+            var precioFinal = precioD2 - descuentoD2;
 
-            document.getElementById("precioDescuento").value = precioFinalD2;
+            document.getElementById("precioDescuento").value = precioFinal;
         }else{
-            var precioD3 = 3 * 35;
+            var precioD3 = cantidad * 35;
             var descuentoD3 = precioD3 * 5 / 100;
-            var precioFinalD3 = precioD3 - descuentoD3;
+            var precioFinal = precioD3 - descuentoD3;
 
-            document.getElementById("precioDescuento").value = precioFinalD3;
+            document.getElementById("precioDescuento").value = precioFinal;
             }
     }
-     }
+///////////////////////////////////PARTE E///////////////////////////
+
+    if(precioFinal > 119){
+        var brutosSuma = precioFinal * 10 / 100;
+        var brutosSuma1 = brutosSuma + precioFinal;
+        alert("IIBB Usted superó los $120 y va a pagar 10% de impuestos")
+        document.getElementById("precioDescuento").value = brutosSuma1;
+    }
 }
